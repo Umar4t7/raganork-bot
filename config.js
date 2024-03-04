@@ -1,8 +1,8 @@
 const fs = require('fs');
 const { Sequelize } = require('sequelize');
-const isVPS = !(__dirname.startsWith("/rgnk") || __dirname.startsWith("/skl"));
-const isHeroku = __dirname.startsWith("/skl");
-const isKoyeb = __dirname.startsWith("/rgnk");
+const isVPS = !(__dirname.startsWith("/UMAR") || __dirname.startsWith("/CUTE-BACHA"));
+const isHeroku = __dirname.startsWith("/UMAR");
+const isKoyeb = __dirname.startsWith("/UMAR");
 const isRailway = __dirname.startsWith("/railway");
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 function convertToBool(text, fault = 'true',fault2='on') {
@@ -25,7 +25,7 @@ DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBU
 if (!(process.env.SESSION || process.env.SESSION_ID)) throw new Error("No session found, add session before starting bot")
 module.exports = {
     VERSION: 'v4.0.0',
-    ALIVE: process.env.ALIVE || "https://i.imgur.com/KCnoMM2.jpg Hey {sender}, I'm alive \n Uptime: {uptime}",
+    ALIVE: process.env.ALIVE || "https://telegra.ph/file/e3717cff3665271175348.jpg Hey {sender}, I'm alive \n Uptime: {uptime}",
     BLOCK_CHAT: process.env.BLOCK_CHAT || '',
     PM_ANTISPAM: convertToBool(process.env.PM_ANTISPAM) || '',
     ALWAYS_ONLINE: convertToBool(process.env.ALWAYS_ONLINE) || false,
@@ -46,23 +46,23 @@ module.exports = {
     PMB_VAR: convertToBool(process.env.PMB_VAR) || false,
     DIS_PM: convertToBool(process.env.DIS_PM) || false,
     REJECT_CALLS: convertToBool(process.env.REJECT_CALLS) || false,
-    PMB: process.env.PMB || '_Personal messages not allowed, BLOCKED!_',
+    PMB: process.env.PMB || '_Personal messages not allowed *😘✨ ❮ᴜᴍᴀʀ-ᴄᴜᴛᴇ-ʙᴀᴄʜᴀ❯✨😘*_',
     READ_COMMAND: convertToBool(process.env.READ_COMMAND) || true,
     SESSION: (process.env.SESSION || process.env.SESSION_ID || '').trim() || '',
     IMGBB_KEY: ["76a050f031972d9f27e329d767dd988f", "deb80cd12ababea1c9b9a8ad6ce3fab2", "78c84c62b32a88e86daf87dd509a657a"],
     RG: process.env.RG || '919074309534-1632403322@g.us,120363116963909366@g.us',
-    BOT_INFO: process.env.BOT_INFO || 'Raganork;Skl11;0;https://i.imgur.com/P7ziVhr.jpeg;https://chat.whatsapp.com/Dt3C4wrQmt0GG6io1IBIHb',
+    BOT_INFO: process.env.BOT_INFO || '✮❮ᴜᴍᴀʀ❯✮;*😘✨ ❮ᴜᴍᴀʀ-ᴄᴜᴛᴇ-ʙᴀᴄʜᴀ❯✨😘*;12495231178;https://telegra.ph/file/e3717cff3665271175348.jpg;https://chat.whatsapp.com/Hwo2RhSbkW91pPzxw4HTgB',
     RBG_KEY: process.env.RBG_KEY || '',
-    ALLOWED: process.env.ALLOWED || '91,94,2',
-    NOT_ALLOWED: process.env.ALLOWED || '91,94,212',
+    ALLOWED: process.env.ALLOWED || '92',
+    NOT_ALLOWED: process.env.ALLOWED || '92',
     CHATBOT: process.env.CHATBOT || 'off',
     HANDLERS: process.env.HANDLERS || '.,',
-    STICKER_DATA: process.env.STICKER_DATA || "Raganork",
-    BOT_NAME: process.env.BOT_NAME || 'Raganork',
+    STICKER_DATA: process.env.STICKER_DATA || "*😘✨ ❮ᴜᴍᴀʀ-ᴄᴜᴛᴇ-ʙᴀᴄʜᴀ❯✨😘*",
+    BOT_NAME: process.env.BOT_NAME || '*✮❮ᴜᴍᴀʀ❯✮*',
     AUDIO_DATA: process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "private" ? 'ꪶ͢٭𝑺𝜣𝑼𝑹𝛢𝑽𝑲𝑳¹¹ꫂ;Raganork MD bot;https://i.imgur.com/P7ziVhr.jpeg' : process.env.AUDIO_DATA,
     TAKE_KEY: process.env.TAKE_KEY || '',
-    MODE: process.env.MODE || 'private',
-    WARN: process.env.WARN || '4',
+    MODE: process.env.MODE || 'public',
+    WARN: process.env.WARN || '2',
     ANTILINK_WARN: process.env.ANTILINK_WARN || '',
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
@@ -71,7 +71,7 @@ module.exports = {
     },
     DATABASE_URL: DATABASE_URL,
     DATABASE: DATABASE_URL === './bot.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
-    SUDO: process.env.SUDO || "",
+    SUDO: process.env.SUDO || "12495231178",
     LANGUAGE: process.env.LANGUAGE || 'english',
     DEBUG: DEBUG,
     ACR_A: "ff489a0160188cf5f0750eaf486eee74",
